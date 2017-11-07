@@ -82,7 +82,7 @@ public final class RavenBootstrap {
       Optional<String> environment, Optional<String> release, Optional<String> serverName,
       boolean cleanRootLogger) {
     final RavenAppenderFactory raven = new RavenAppenderFactory();
-    raven.setThreshold(Level.ERROR);
+    raven.setThreshold(Level.ERROR.levelStr);
     raven.setDsn(dsn);
     raven.setTags(tags);
     raven.setEnvironment(environment);
